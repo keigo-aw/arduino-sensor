@@ -21,16 +21,31 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section data-background-image="img/cover.png" data-background-transition="zoom">
+				<section data-background-transition="zoom">
+					<section data-background-image="img/cover.png"  data-background-size="contain">
+					</section>
+					<section>
+						<h3>Development Environment Setup</h3>
+  						<ul style="float: left;" >
+							<div> 
+								<h3 style="font-size: 30px">Arudino IDE Download (1.18.19)</h3>
+								<li style="font-size: 25px"><a class="explicit-link" href="https://www.arduino.cc/en/software" style="font-size: 20px" target="_blank">https://www.arduino.cc/en/software</a></li>
+							</div>
+							<p> </p>	
+							<div>					
+								<h3 style="font-size: 30px">Arduino Web Editor (Require Plugin Install for Chrome)</h3>
+								<li style="font-size: 25px"><a class="explicit-link" href="https://create.arduino.cc/editor" style="font-size: 20px" target="_blank">https://create.arduino.cc/editor</a></li>
+								<li style="font-size: 25px"><a class="explicit-link" href="https://create.arduino.cc/getting-started/plugin/welcome" style="font-size: 20px" target="_blank">https://create.arduino.cc/getting-started/plugin/welcome</a></li>	
+							</div>				
+						</ul>
+					</section>
 				</section>
 
 				<section data-transition="convex">
 					<h3>Learning Outcome</h3>
 					<ul>
-						<li >Understand the working principles of Microcontrollers
-</li>
-						<li >Apply knowledge and develop program to control & monitor sensors
-</li>
+						<li >Understand the working principles of Microcontrollers</li>
+						<li >Apply knowledge and develop program to control & monitor sensors</li>
 					</ul>
 				</section>
 
@@ -235,9 +250,151 @@
 						<div class="fragment">					
 							<li><h3 style="font-size: 30px">Import into Arduino IDE</h3>
 							<li style="font-size: 25px; margin-left:2em;">Select “Sketch”->”Import”</li></li>
-						</div>	
-						<p> </p>	
-						<div class="fragment">					
+						</div>										
+					</ul>
+  				</section>
+
+				<section data-transition="convex"> 
+                    <p style="float: left; font-size: 30px;">Sample Code</p>
+                    <pre style="float: left;"><code data-line-numbers="|22-24|41-49|99-111|116-133">
+// ---------------------------------------------------------------- //
+// Arduino Ultrasoninc Distance Sensor (HC-SR04)
+// Using Arduino IDE 1.8.16
+// Tested on 05 Jul 2022
+// ---------------------------------------------------------------- //
+
+//=================================================================
+// Drivers & Libraries
+//=================================================================
+#include "stdio.h"
+/*
+   @todo - add codes to include library header
+*/
+
+//=================================================================
+//  Pins Definition
+//=================================================================
+/*
+   @todo - define pins for ultrasonic & buzzer
+*/
+#define echo_pin 17 // attach pin A2 Arduino to pin Echo of HC-SR04
+#define trig_pin 16 // attach pin A3 Arduino to pin Trig of HC-SR04
+#define buzz_pin 15 // attach pin A1 Arduino tp pin Vcc of buzzer
+
+//=================================================================
+//  Variables Declaration
+//=================================================================
+/*
+   @todo (ultrasonic) - declare variables for distance calculation
+*/
+
+
+/*
+   @todo - oled display (SSD1306), add codes to declare display instance
+*/
+
+//=================================================================
+// LED blink
+//=================================================================
+void led_blink()
+{
+  // On for 100msec
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(100);
+  // Off for 100msec
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(100);
+}
+
+//=================================================================
+//  Trigger pulse & measure travel time
+//=================================================================
+void trigger_measure()
+{
+  /**
+      @todo (ultrasonic) - add codes to write a trigger pulse & wait to receive the echo pulse
+  */
+  
+  
+}
+
+//=================================================================
+//  Calculate distance
+//=================================================================
+void calculate_distance()
+{
+  // Calculating the distance
+  /**
+      @todo (ultrasonic) - add codes to calculate distance
+  */
+  
+}
+
+//=================================================================
+//  Write distance to OLED display
+//=================================================================
+void draw(void)
+{
+  /**
+      @todo (oled display) - add codes to display text
+  */
+  
+  
+}
+
+//=================================================================
+//  
+//=================================================================
+void play_tone(void)
+{
+  
+  
+}
+
+//=================================================================
+//  System Initialization
+//=================================================================
+void setup(void) 
+{
+  // Configure I/O pins
+  /**
+      @todo - add codes to configure pins as input or output
+  */
+  pinMode(LED_BUILTIN, OUTPUT);  // Set pin LED_BUILTIN as an output
+
+  // Serial monitor setup (baudrate: 9600)
+  Serial.begin(9600);
+  Serial.println("Ultrasonic Distance Sensor");
+  Serial.println("with Arduino UNO R3");
+}
+
+//=================================================================
+//  Logic Execution
+//=================================================================
+void loop(void) {
+
+  // Comment off led_blink(), for faster response on ultrasonic distance measurement
+  // LED blink
+  led_blink();
+
+  // Trigger ultrasonic pulse and measure duration
+  trigger_measure();
+
+  // Calculate distance based on lapsed interval
+  calculate_distance();
+
+  /**
+      @todo - add new logic here
+  */
+  
+  delay(50);
+}  
+                    </code></pre>
+  				</section>
+
+  				<section data-transition="convex">
+  					<ul style="float: left;"> 							
+						<div>					
 							<li><h3 style="font-size: 30px">Connect the UNO Board to PC</h3></li>
 						</div>
 						<p> </p>	
@@ -284,8 +441,17 @@ U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);
                     <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">draw()</b></p>
                     <pre style="float: left;"><code>
 // Graphic commands to redraw the complete screen 
-u8g.drawStr(0, 20, "Hello World!");  
-                    </code></pre>             
+u8g.drawStr(0, 20, "Hello World!");
+u8g.setFont(u8g_font_unifont);  
+                    </code></pre>  
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">loop()</b></p>
+                    <pre style="float: left;"><code>
+// Update OLED display
+u8g.firstPage();
+do {
+  draw();
+} while (u8g.nextPage());  
+                    </code></pre>           
   				</section>
 
   				<section data-transition="convex">
@@ -338,20 +504,30 @@ pinMode(echo_pin, INPUT);      // Sets echo_pin as an INPUT
   				<section data-transition="convex"> 
                     <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">trigger_measure()</b></p>
                     <pre style="float: left;"><code>
-// Clears the trigPin condition
+// Clears the trig_pin condition
 digitalWrite(trig_pin, LOW);
 delayMicroseconds(2);
-// Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+// Sets the trig_pin HIGH (ACTIVE) for 10 microseconds
 digitalWrite(trig_pin, HIGH);
 delayMicroseconds(10);
 digitalWrite(trig_pin, LOW);
-// Reads the echoPin, returns the sound wave travel time in microseconds
+// Reads the echo_pin, returns the sound wave travel time in microseconds
 duration = pulseIn(echo_pin, HIGH);  
                     </code></pre>
                     <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">calculate_distance ()</b></p>
                     <pre style="float: left;"><code>
 // Calculate the distance
 distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (to and fro)  
+                    </code></pre>
+  				</section>
+
+  				<section data-transition="convex"> 
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">loop()</b></p>
+                    <pre style="float: left;"><code>
+// Displays distance to serial monitor
+Serial.print("Distance: ");
+Serial.print(distance);
+Serial.println(" cm");  
                     </code></pre>
   				</section>
 
