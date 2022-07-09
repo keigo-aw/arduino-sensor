@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction to Sensor Technology</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>		
+	</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-image="img/cover.png" data-background-transition="zoom">
+				</section>
+
+				<section data-transition="convex">
+					<h3>Learning Outcome</h3>
+					<ul>
+						<li >Understand the working principles of Microcontrollers
+</li>
+						<li >Apply knowledge and develop program to control & monitor sensors
+</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Microcontroller</h3>
+					<p>Microcontroller is a <b style="color:Brown">self contained computer</b>, in a compact IC (Integrated Circuit) chip, with <b style="color:Brown">specialized peripherals</b> for embedded applications"
+					</p>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Peripherals</h3>
+					<ul>
+						<li >General Purpose I/O (GPIO)</li>
+						<li >UART, I2C, SPI, CAN, Ethernet, USB</li>
+						<li >Timers</li>
+						<li >ADCs and DACs</li>
+						<li >Pulse Width Modulators (PWM)</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Architecture</h3>					
+					<img src="img/microcontroller_architecture.png">  
+					<a class="explicit-link" href="https://www.theengineeringprojects.com/2018/03/introduction-to-microcontrollers.html" style="font-size: 20px" target="_blank">https://www.theengineeringprojects.com/2018/03/introduction-to-microcontrollers.html</a>				
+				</section>
+
+				<section>
+					<h3>Microntroller based System</h3>
+					<div class="r-stack">
+						<img src="img/microcontroller_system_1.png">
+						<img src="img/microcontroller_system_2.png">
+					  	<img class="fragment" src="img/microcontroller_system_3.png" height="233" width="228">
+					</div>
+    			</section>
+
+    			<section data-transition="convex">
+					<h3>Microcontroller Use Cases</h3>
+					<img src="img/microcontroller_use_case.png" width="60%" style="float: left; margin-top: 100px; ">
+					<ul style="width: 30%;">
+						<div class="fragment"> 
+							<h3 style="font-size: 30px">Consumer Appliances</h3>
+							<li style="font-size: 25px">GPS</li>
+							<li style="font-size: 25px">Watches</li>
+							<li style="font-size: 25px">Microwave oven</li>
+							<li style="font-size: 25px">Coffee maker</li>
+							<li style="font-size: 25px">Washer and dryers</li>
+							<li style="font-size: 25px">Home entertainment</li>
+						</div>
+						<p> </p>	
+						<div class="fragment">					
+							<h3 style="font-size: 30px">Automobile Systems</h3>
+							<li style="font-size: 25px">Engine control (ECU)</li>
+							<li style="font-size: 25px">Fuel system</li>
+							<li style="font-size: 25px">Airbags</li>
+							<li style="font-size: 25px">Door locks</li>
+							<li style="font-size: 25px">Instrumentation</li>	
+						</div>				
+					</ul>
+				</section>
+
+				<section data-transition="zoom">
+  					<h2>Ultrasonic Distance Sensor</h2>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Ultrasonic Distance Sensor</h3>
+					<img src="img/ultrasonic_distance_sensor.png" width="60%" style="float: left; margin-top: 80px; ">
+					<ul style="width: 30%; margin-top: 100px;">
+						<div class="fragment"> 
+							<h3 style="font-size: 30px">Key Components</h3>
+							<li style="font-size: 25px">Arduino UNO</li>
+							<li style="font-size: 25px">Ultrasonic (HC-SR04)</li>
+							<li style="font-size: 25px">Display (DFR0486)</li>
+						<div>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h3>How it works</h3>	
+					<div class="r-stack">				
+					<img class="fragment fade-out" data-fragment-index="0"src="img/ultrasonic_theory_1.png">
+					<img class="fragment current-visible" data-fragment-index="0" src="img/ultrasonic_theory_2.png">
+					<img class="fragment" src="img/ultrasonic_theory_3.png">
+					</div>
+					<a class="explicit-link" href="https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/" style="font-size: 20px" target="_blank">https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/</a>
+				</section>
+
+				<section data-transition="convex">
+					<h3>Ultrasonic Sensor (HC-SR04)</h3>
+					<img src="img/hc_sr04.png" width="50%" style="float: left;">
+					<ul style="width: 40%;">
+						<table style="font-size: 20px">
+					    	<thead style="font-size: 30px"><tr><td style="text-align: left;"><b>Specifications</b></td><td><b></b></td></tr></thead>
+					        <tbody style="font-size: 20px;">
+					        	<tr><td style="text-align: left;">Operation Voltage</td><td style="text-align: left;">5V</td></tr>
+					        	<tr><td style="text-align: left;">Operating Current</td><td style="text-align: left;">15mA</td></tr>
+					        	<tr><td style="text-align: left;">Operating Frequency</td><td style="text-align: left;">40 Hz</td></tr>
+					        	<tr><td style="text-align: left;">Measurement Angle</td><td style="text-align: left;">15°</td></tr>
+					        	<tr><td style="text-align: left;">Resolution</td><td style="text-align: left;">0.3cm</td></tr>
+					        	<tr><td style="text-align: left;">Range</td><td style="text-align: left;">2 – 400 cm</td></tr>
+					        </tbody>
+				    	</table>
+			    	</ul>
+					<a class="explicit-link" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+" style="font-size: 20px" target="_blank">https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+					</a>						
+				</section>
+
+				<section data-transition="convex">
+					<h3>I2C OLED Display (DFR0486)</h3>
+					<img src="img/dfr0486.png" width="30%" style="float: left;">
+					<ul style="width: 40%;">
+						<table>
+					    	<thead style="font-size: 30px"><tr><td style="text-align: Left;"><b>Specifications</b></td><td style="text-align: Left;"><b></b></td></tr></thead>
+					        <tbody style="font-size: 20px;">
+					        	<tr><td style="text-align: left;">Operation Voltage</td><td style="text-align: left;">3.3~5V</td></tr>
+					        	<tr><td style="text-align: left;">Resolution</td><td style="text-align: left;">128x64 pixels</td></tr>
+					        	<tr><td style="text-align: left;">Interface Mode</td><td style="text-align: left;">Gravity I2C</td></tr>
+					        	<tr><td style="text-align: left;">Power Consumption</td><td style="text-align: left;">22.75mA</td></tr>
+					        	<tr><td style="text-align: left;">Module Size</td><td style="text-align: left;">41.2x26.2mm</td></tr>
+					        	<tr><td style="text-align: left;">Module Weight</td><td style="text-align: left;">15g</td></tr>
+					        </tbody>
+				    	</table>
+			    	</ul>
+					<a class="explicit-link" href="https://www.farnell.com/datasheets/2700123.pdf
+" style="font-size: 20px" target="_blank">https://www.farnell.com/datasheets/2700123.pdf
+					</a>						
+				</section>
+
+				<section data-transition="convex">
+					<h3>Arduino UNO</h3>
+					<img src="img/arduino_uno.png" width="40%" style="float: left; margin-top: 80px;">
+					<ul style="width: 50%;">
+						<table>
+					    	<thead style="font-size: 30px"><tr><td style="text-align: Left;"><b>Specifications</b></td><td style="text-align: Left;"><b></b></td></tr></thead>
+					        <tbody style="font-size: 20px;">
+					        	<tr><td style="text-align: left;">Microcontroller</td><td style="text-align: left;">ATmega328P</td></tr>
+					        	<tr><td style="text-align: left;">Power</td><td style="text-align: left;">I/O Voltage: 5V <br>Input Voltage: 7-12V</td></tr>
+					        	<tr><td style="text-align: left;">Clock Speed</td><td style="text-align: left;">16 MHz</td></tr>
+					        	<tr><td style="text-align: left;">Memory</td><td style="text-align: left;">Flash: 32 KB <br>SRAM: 2KB <br>EEPROM: 1KB</td></tr>
+					        	<tr><td style="text-align: left;">Pins</td><td style="text-align: left;">Digital I/O: 14 <br>PWM Digital: 6 <br>Analog Input: 6</td></tr>
+					        	<tr><td style="text-align: left;">Dimension
+</td><td style="text-align: left;">L68.6 x W58.4 mm</td></tr>
+								<tr><td style="text-align: left;">Weight
+</td><td style="text-align: left;">25g</td></tr>
+					        </tbody>
+				    	</table>
+			    	</ul>
+					<a class="explicit-link" href="https://www.farnell.com/datasheets/2700123.pdf
+" style="font-size: 20px" target="_blank">https://www.farnell.com/datasheets/2700123.pdf
+					</a>						
+				</section>
+
+				<section data-transition="convex">
+					<section>
+						<h3>Hardware Setup</h3>
+						<img src="img/hardware_setup_1.png" width="50%" style="float: left; margin-top: 60px;">
+						<img src="img/hardware_setup_2.png" width="40%" style="float: right;">
+					</section>					
+  					<section>
+  						<h3>References: <br>Arduino Uno Pinout</h3>
+  						<img src="img/arduino_pinout_1.png" width="70%">
+  					</section>
+  					<section>
+  						<h3>References: <br>Pins to use</h3>
+  						<img src="img/arduino_pinout_2.png" width="70%">
+  					</section>
+  					<section>
+  						<h3>References: <br>Breadboard Connections</h3>
+  						<img src="img/breadboard.png">
+  					</section>
+				</section>
+
+				<section data-transition="zoom">
+  					<h2>Hand-on Session</h2>
+				</section>
+
+				<section data-transition="convex">
+  					<h3>Development Environment Setup</h3>
+  					<ul style="float: left;" >
+						<div> 
+							<h3 style="font-size: 30px">Arudino IDE Download (1.18.19)</h3>
+							<li style="font-size: 25px"><a class="explicit-link" href="https://www.arduino.cc/en/software" style="font-size: 20px" target="_blank">https://www.arduino.cc/en/software</a></li>
+						</div>
+						<p> </p>	
+						<div class="fragment">					
+							<h3 style="font-size: 30px">Arduino Web Editor (Require Plugin Install for Chrome)</h3>
+							<li style="font-size: 25px"><a class="explicit-link" href="https://create.arduino.cc/editor" style="font-size: 20px" target="_blank">https://create.arduino.cc/editor</a></li>
+							<li style="font-size: 25px"><a class="explicit-link" href="https://create.arduino.cc/getting-started/plugin/welcome" style="font-size: 20px" target="_blank">https://create.arduino.cc/getting-started/plugin/welcome</a></li>	
+						</div>				
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+  					<h3>Download & Run Sample Code</h3>
+  					<ul style="float: left;"> 						
+						<div> 
+							<li><h3 style="font-size: 30px">Download Sample Code</h3>
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/keigo-aw" style="font-size: 20px" target="_blank">https://github.com/keigo-aw</a></li></li>
+						</div>						
+						<p> </p>	
+						<div class="fragment">					
+							<li><h3 style="font-size: 30px">Import into Arduino IDE</h3>
+							<li style="font-size: 25px; margin-left:2em;">Select “Sketch”->”Import”</li></li>
+						</div>	
+						<p> </p>	
+						<div class="fragment">					
+							<li><h3 style="font-size: 30px">Connect the UNO Board to PC</h3></li>
+						</div>
+						<p> </p>	
+						<div class="fragment">					
+							<li><h3 style="font-size: 30px">Compile & Upload to UNO Board</h3></li>
+						</div>	
+						<p> </p>	
+						<div class="fragment">					
+							<li><h3 style="font-size: 30px">LED Blink & Serial Monitor</h3></li>
+						</div>									
+					</ul>
+  				</section>
+
+  				<section data-transition="convex">
+  					<h3>Exercise 1: OLED Display</h3>
+  					<ul style="float: left;"> 						
+						<div> 
+							<li><h3 style="font-size: 30px">Download Library</h3>
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/U8glib_Arduino/releases/tag/1.18.1" style="font-size: 20px" target="_blank">https://github.com/olikraus/U8glib_Arduino/releases/tag/1.18.1</a></li></li>
+						</div>						
+						<p> </p>	
+						<div>					
+							<li><h3 style="font-size: 30px">Add Library to Project</h3>
+							<li style="font-size: 25px; margin-left:2em;">Run the Arduino IDE</li>
+							<li style="font-size: 25px; margin-left:2em;">Select “Sketch”->”Include Library”-> “Add .ZIP Library…”</li></li>
+						</div>										
+					</ul>
+  				</section>
+
+  				<section>
+  					<h3>"Hello World” on OLED Display</h3>
+                    <p style="float: left; font-size: 30px;">Include library</p>
+                    <pre style="float: left;"><code>
+#include "U8glib.h" 
+                    </code></pre>
+
+                    <p style="float: left; font-size: 30px;">Declare u8glib instance</p>
+					<pre style="float: left;"><code>
+U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE); 
+      				</code></pre>
+  				</section>
+
+				<section>
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">draw()</b></p>
+                    <pre style="float: left;"><code>
+// Graphic commands to redraw the complete screen 
+u8g.drawStr(0, 20, "Hello World!");  
+                    </code></pre>             
+  				</section>
+
+  				<section data-transition="convex">
+  					<h3>u8glib Documentation</h3>
+  					<ul style="float: left;"> 						
+						<div> 
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/u8glib/wiki/tstring" style="font-size: 20px" target="_blank">https://github.com/olikraus/u8glib/wiki/tstring</a></li>
+							</li>
+						</div>						
+						<p> </p>	
+						<div>					
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/u8glib/wiki" style="font-size: 20px" target="_blank">https://github.com/olikraus/u8glib/wiki</a></li>
+						</div>										
+					</ul>
+  				</section>
+
+  				<section data-transition="convex">
+					<h3>OLED Display Connection</h3>
+					<img src="img/dfr0486.png" width="30%" style="float: left;">
+					<ul style="width: 40%; margin-top: 60px;">
+						<table>
+					    	<thead style="font-size: 30px"><tr><td style="text-align: Left;"><b>OLED Display</b></td><td style="text-align: Left;"><b>Arduino</b></td></tr></thead>
+					        <tbody style="font-size: 20px;">
+					        	<tr><td style="text-align: center;">GND</td><td style="text-align: center;">GND</td></tr>
+					        	<tr><td style="text-align: center;">Vcc(+5V)</td><td style="text-align: center;">5V</td></tr>
+					        	<tr><td style="text-align: center;">SDA(data)</td><td style="text-align: center;">A4/18(I2C)</td></tr>
+					        	<tr><td style="text-align: center;">SCL(clock)</td><td style="text-align: center;">A5/19(I2C)</td></tr>
+					        </tbody>
+				    	</table>
+			    	</ul>
+					<a class="explicit-link" href="https://www.farnell.com/datasheets/2700123.pdf" style="font-size: 20px" target="_blank">https://www.farnell.com/datasheets/2700123.pdf</a>						
+				</section>
+
+				<section data-transition="convex">
+  					<h3>Exercise 2: Ultrasonic Sensor</h3>
+  					<p style="float: left; font-size: 30px;">Add variables</p>
+                    <pre style="float: left;"><code>
+long duration; // variable for the duration of sound wave travel
+float distance; // variable for the distance measurement
+char charArrayDist[10];
+String stringUnit = "cm";  
+                    </code></pre> 
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">Setup()</b></p>
+                    <pre style="float: left;"><code>
+pinMode(trig_pin, OUTPUT);     // Sets trig_pin as an OUTPUT  
+pinMode(echo_pin, INPUT);      // Sets echo_pin as an INPUT  
+                    </code></pre>
+  				</section>
+
+  				<section data-transition="convex"> 
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">trigger_measure()</b></p>
+                    <pre style="float: left;"><code>
+// Clears the trigPin condition
+digitalWrite(trig_pin, LOW);
+delayMicroseconds(2);
+// Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+digitalWrite(trig_pin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trig_pin, LOW);
+// Reads the echoPin, returns the sound wave travel time in microseconds
+duration = pulseIn(echo_pin, HIGH);  
+                    </code></pre>
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">calculate_distance ()</b></p>
+                    <pre style="float: left;"><code>
+// Calculate the distance
+distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (to and fro)  
+                    </code></pre>
+  				</section>
+
+  				<section data-transition="convex">
+					<h3>Ultrasonic Sensor Connection</h3>
+					<img src="img/hc_sr04.png" width="50%" style="float: left;">
+					<ul style="width: 40%; margin-top: 40px;">
+						<table style="font-size: 20px">
+					    	<thead style="font-size: 30px"><tr><td style="text-align: left;"><b>Ultrasonic</b></td><td><b>Adruino</b></td></tr></thead>
+					        <tbody style="font-size: 20px;">
+					        	<tr><td style="text-align: center;">Vcc(+5V)</td><td style="text-align: center;">5V</td></tr>
+					        	<tr><td style="text-align: center;">Trig</td><td style="text-align: center;">A2/16(GPIO)</td></tr>
+					        	<tr><td style="text-align: center;">Echo</td><td style="text-align: center;">A3/17(GPIO)</td></tr>
+					        	<tr><td style="text-align: center;">GND</td><td style="text-align: center;">GND</td></tr>				
+					        </tbody>
+				    	</table>
+			    	</ul>
+					<a class="explicit-link" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+" style="font-size: 20px" target="_blank">https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+					</a>						
+				</section>
+
+  				<section data-transition="convex">
+  					<h3>Distance on OLED Display</h3> 
+                    <p style="float: left; font-size: 30px;">Replace codes in function <b style="color:CornflowerBlue">draw()</b></p>
+                    <pre style="float: left;"><code>
+// Set display font
+u8g.setFont(u8g_font_unifont);
+// Convert decimal value to string
+dtostrf(distance, 4, 2, charArrayDist);
+// Append text “cm”
+strcat(charArrayDist, stringUnit.c_str());
+// Draw distance value & “cm”
+u8g.drawStr(0, 12, charArrayDist);  
+                    </code></pre>
+  				</section>
+
+				<section data-transition="convex">
+  					<h3>Extra: Buzzer</h3> 
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">setup()</b></p>
+                    <pre style="float: left;"><code>
+// Sets the pin as an OUTPUT
+pinMode(buzz_pin, OUTPUT);  
+                    </code></pre>
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">play_tone()</b></p>
+                    <pre style="float: left;"><code>
+// Start tone (pin number, frequency in Hz)
+tone(buzz_pin,200); 
+delay(500); 
+// Stop tone (pin number, frequency in Hz)
+noTone(buzz_pin); 
+delay(500);  
+                    </code></pre>
+  				</section>
+
+  				<section data-transition="convex"> 
+                    <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">loop()</b></p>
+                    <pre style="float: left;"><code>
+// Conditional activation of buzzer
+if (distance < 3)  
+{    
+  play_tone();  
+}                     
+				</code></pre>                  
+  				</section>
+
+				<section data-transition="convex">
+					<h3>Buzzer Connection</h3>
+					<img src="img/buzzer.png" width="30%" style="float: left;">
+					<ul style="width: 40%; margin-top: 40px;">
+						<table style="font-size: 20px">
+					    	<thead style="font-size: 30px"><tr><td style="text-align: center;"><b>Buzzer</b></td><td><b>Adruino</b></td></tr></thead>
+					        <tbody style="font-size: 20px;">
+					        	<tr><td style="text-align: center;">GND (Short Leg)</td><td style="text-align: center;">GND</td></tr>
+					        	<tr><td style="text-align: center;">Vcc (Long Leg)</td><td style="text-align: center;">A0/14(GPIO)</td></tr>					        					
+					        </tbody>
+				    	</table>
+			    	</ul>
+					<a class="explicit-link" href="https://www.jp.tdk.com/tefe02/ef532_ps.pdf" style="font-size: 20px" target="_blank">https://www.jp.tdk.com/tefe02/ef532_ps.pdf
+					</a>						
+				</section>
+
+				<section data-transition="convex">
+  					<h3>Extra Extra: Buzzer to play Melody</h3> 
+                    <p style="float: left; font-size: 30px;">Include Header File</b></p>
+                    <pre style="float: left;"><code>
+#include "melody.h"  
+                    </code></pre>                                    
+  				</section>
+
+  				<section data-transition="convex"> 
+                    <p style="float: left; font-size: 30px;">Declare Variables</b></p>
+                    <pre style="float: left;"><code>
+// Melody notes
+int melody[] = 
+{  
+  NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4
+};
+// Note durations: 4 = quarter note, 8 = eighth note, etc.
+int noteDurations[] = 
+{  
+  4, 8, 8, 4, 4, 4, 4, 4
+};  
+                    </code></pre>                  
+  				</section>
+
+  				<section data-transition="convex"> 
+                    <p style="float: left; font-size: 30px;">Replace codes in function <b style="color:CornflowerBlue">play_tone()</b></p>
+                    <pre style="float: left;"><code>
+for (int thisNote = 0; thisNote < 8; thisNote++) 
+{    
+  // to calculate the note duration, take one second divided by the note type      
+  // e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.    
+  int noteDuration = 1000 / noteDurations[thisNote];    
+  tone(buzz_pin, melody[thisNote], noteDuration);    
+  // to distinguish the notes, set a minimum time between them.    
+  // the note's duration + 30% seems to work well:    
+  int pauseBetweenNotes = noteDuration * 1.30;      
+  delay(pauseBetweenNotes);    
+  // stop the tone playing:    
+  noTone(8);  
+}                     
+				</code></pre>                  
+  				</section>
+
+  				<section> 					
+  					<h3>Summary</h3>  											
+					<ul style="float: left;"> 						
+						<div> 
+							<li><h3 style="font-size: 30px">Learning Outcomes</h3>
+							<li style="font-size: 25px; margin-left:2em;">Understand the working principles of Microcontrollers</li>
+							<li style="font-size: 25px; margin-left:2em;">Apply knowledge and develop program to control & monitor sensors</li>
+							</li>
+						</div>
+						<div>
+						<p></p>
+						
+							<img src="img/summary.png" width="100%" style="float: center;">
+						</div>						
+						<div>
+							<li><h3 style="font-size: 30px">Arduino Examples</h3>
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://howtomechatronics.com/arduino-projects/" style="font-size: 20px" target="_blank">https://howtomechatronics.com/arduino-projects/
+					</a></li>
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://create.arduino.cc/projecthub/projects/tags/arduino" style="font-size: 20px" target="_blank">https://create.arduino.cc/projecthub/projects/tags/arduino
+					</a></li>
+							</li>
+						</div>																
+					</ul>										
+					
+  				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
