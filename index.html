@@ -441,8 +441,8 @@ U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);
                     <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">draw()</b></p>
                     <pre style="float: left;"><code>
 // Graphic commands to redraw the complete screen 
+u8g.setFont(u8g_font_unifont);
 u8g.drawStr(0, 20, "Hello World!");
-u8g.setFont(u8g_font_unifont);  
                     </code></pre>  
                     <p style="float: left; font-size: 30px;">Add to function <b style="color:CornflowerBlue">loop()</b></p>
                     <pre style="float: left;"><code>
@@ -452,20 +452,6 @@ do {
   draw();
 } while (u8g.nextPage());  
                     </code></pre>           
-  				</section>
-
-  				<section data-transition="convex">
-  					<h3>u8glib Documentation</h3>
-  					<ul style="float: left;"> 						
-						<div> 
-							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/u8glib/wiki/tstring" style="font-size: 20px" target="_blank">https://github.com/olikraus/u8glib/wiki/tstring</a></li>
-							</li>
-						</div>						
-						<p> </p>	
-						<div>					
-							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/u8glib/wiki" style="font-size: 20px" target="_blank">https://github.com/olikraus/u8glib/wiki</a></li>
-						</div>										
-					</ul>
   				</section>
 
   				<section data-transition="convex">
@@ -484,6 +470,20 @@ do {
 			    	</ul>
 					<a class="explicit-link" href="https://www.farnell.com/datasheets/2700123.pdf" style="font-size: 20px" target="_blank">https://www.farnell.com/datasheets/2700123.pdf</a>						
 				</section>
+
+  				<section data-transition="convex">
+  					<h3>u8glib Documentation</h3>
+  					<ul style="float: left;"> 						
+						<div> 
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/u8glib/wiki/tstring" style="font-size: 20px" target="_blank">https://github.com/olikraus/u8glib/wiki/tstring</a></li>
+							</li>
+						</div>						
+						<p> </p>	
+						<div>					
+							<li style="font-size: 25px; margin-left:2em;"><a class="explicit-link" href="https://github.com/olikraus/u8glib/wiki" style="font-size: 20px" target="_blank">https://github.com/olikraus/u8glib/wiki</a></li>
+						</div>										
+					</ul>
+  				</section>				
 
 				<section data-transition="convex">
   					<h3>Exercise 2: Ultrasonic Sensor</h3>
@@ -675,8 +675,24 @@ for (int thisNote = 0; thisNote < 8; thisNote++)
 					</a></li>
 							</li>
 						</div>																
-					</ul>										
-					
+					</ul>															
+  				</section>
+
+  				<section data-transition="convex">
+  					<ul style="float: left;"> 							
+						<div>					
+							<div style="font-size: 40px"><b>Aw Kok Seng</b></div>
+							<a class="explicit-link" href="mailto: kokseng.aw@singaporetech.edu.sg" style="font-size: 30px" target="_blank">kokseng.aw@singaporetech.edu.sg
+							</a>
+						</div>
+						<p> </p>	
+						<div>					
+							<div style="font-size: 40"><b>Raymond Keh</b></div>
+							<a class="explicit-link" href="mailto: raymond.keh@singaporetech.edu.sg" style="font-size: 30px" target="_blank">raymond.keh@singaporetech.edu.sg
+							</a>
+						</div>
+															
+					</ul>
   				</section>
 
 			</div>
