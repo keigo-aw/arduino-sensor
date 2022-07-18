@@ -1,0 +1,57 @@
+h3.subheader {
+	font-size: 30px;
+}	
+
+ul.align-left {
+	float: left;
+}	
+
+li.element {
+	font-size: 25px;
+}
+
+li.subelement {
+	font-size: 25px;
+	margin-left:2em;
+}
+
+a.url {
+	font-size: 20px;
+}
+
+a.email {
+	font-size: 30px;
+}
+
+b.color-brown {
+	color:Brown;
+}
+
+b.color-blue {
+	color:CornflowerBlue;
+}
+
+thead.header { 
+	font-size: 30px; 
+}
+
+tbody.body { 
+	font-size: 20px; 
+}
+
+td.align-left { 
+	text-align: left; 
+}
+
+td.text-center { 
+	text-align: center;
+}
+
+p.snippet-header {
+	float: left;
+	font-size: 30px;
+}
+
+pre.snippet-body {
+	float: left;
+}
