@@ -39,6 +39,11 @@
 								<h3 class="subheader">Arduino Web Editor (Require Plugin Install for Chrome)</h3>
 								<li class="element"><a class="url" href="https://create.arduino.cc/editor" target="_blank">https://create.arduino.cc/editor</a></li>
 								<li class="element"><a class="url" href="https://create.arduino.cc/getting-started/plugin/welcome" target="_blank">https://create.arduino.cc/getting-started/plugin/welcome</a></li>	
+							</div>
+							<p></p>	
+							<div>					
+								<h3 class="subheader">Slides in PDF</h3>
+								<li class="element"><a class="url" href="./index.html?print-pdf" target="_blank">Export to PDF</a></li>	
 							</div>				
 						</ul>
 					</section>
@@ -732,7 +737,7 @@ for (int thisNote = 0; thisNote < 8; thisNote++)
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				slideNumber: true,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
